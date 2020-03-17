@@ -1,0 +1,32 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-eslint-rules",
+    "tslint-react",
+    "tslint-no-circular-imports",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true,
+    "curly": [true, "ignore-same-line"],
+    "no-console": false,
+    "ordered-imports": false,
+    "member-ordering": false,
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "interface-over-type-literal": { "severity": "warn" },
+    "no-empty-interface": { "severity": "warn" },
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "no-shadowed-variable": false,
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false,
+    "max-classes-per-file": false
+  }
+}

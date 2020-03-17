@@ -1,0 +1,12 @@
+/.github
+/.vscode
+/examples
+.gitattributes
+.prettierrc
+tsconfig.json
+tslint.json
+circle.yml
+*.md
+
+/android/build
+/src

@@ -1,10 +1,16 @@
 {
   "name": "@ornament-health/react-native-cvcam",
   "version": "0.0.1",
+  "private": true,
   "description": "React Native OpenCV utilities",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npx npm-merge-driver install",
+    "prepublishOnly": "rm -rf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix && ./node_modules/.bin/tsc --noEmit --skipLibCheck",
+    "dist": "tsc"
   },
   "repository": {
     "type": "git",
@@ -17,14 +23,32 @@
   },
   "homepage": "https://github.com/Ornament-Health/react-native-cvcam#readme",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "engines": {
     "npm": ">=6.9.0"
   },
-  "typings": "./index.d.ts",
+  "sideEffects": false,
+  "nativePackage": true,
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-native": "^0.61.22",
+    "npm-merge-driver": "^2.3.5",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "react": "^16.13.0",
+    "react-native": "^0.61.5",
+    "tslint": "^6.1.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-no-circular-imports": "^0.7.0",
+    "tslint-plugin-prettier": "^2.2.0",
+    "tslint-react": "^4.2.0",
+    "typescript": "^3.8.3"
+  },
   "peerDependencies": {
     "react-native": "^0.61.2",
-    "react-native-fs": "^2.16.2"
+    "react-native-fs": "^2.16.2",
+    "tslib": "^1.10.0"
   }
 }
