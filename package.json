@@ -1,0 +1,30 @@
+{
+  "name": "@ornament-health/react-native-cvcam",
+  "version": "0.0.1",
+  "description": "React Native OpenCV utilities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ornament-Health/react-native-cvcam.git"
+  },
+  "author": "Ornament Health AG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ornament-Health/react-native-cvcam/issues"
+  },
+  "homepage": "https://github.com/Ornament-Health/react-native-cvcam#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
+  "engines": {
+    "npm": ">=6.9.0"
+  },
+  "typings": "./index.d.ts",
+  "peerDependencies": {
+    "react-native": "^0.61.2",
+    "react-native-fs": "^2.16.2"
+  }
+}
